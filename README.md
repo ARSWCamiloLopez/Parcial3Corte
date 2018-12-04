@@ -8,7 +8,14 @@ Al ya tener los mensajes correctamente formateados con Json procediamos a realiz
 
 ## Pruebas
 - Implementacion de los cambios de temperatura en la persistencia.
+![alt text](https://github.com/ARSWCamiloLopez/Parcial3Corte/blob/master/screenshots/Screenshot%20from%202018-12-04%2011-34-19.png)
+![alt text](https://github.com/ARSWCamiloLopez/Parcial3Corte/blob/master/screenshots/Screenshot%20from%202018-12-04%2011-34-46.png)
 - Implementacion del controlador con sus respectivas direccione o path.
+![alt text](https://github.com/ARSWCamiloLopez/Parcial3Corte/blob/master/screenshots/Screenshot%20from%202018-12-04%2011-35-48.png)
+![alt text](https://github.com/ARSWCamiloLopez/Parcial3Corte/blob/master/screenshots/Screenshot%20from%202018-12-04%2011-36-05.png)
 - Implementacion del archivo javascript con las peticiones get con axios.
+![alt text](https://github.com/ARSWCamiloLopez/Parcial3Corte/blob/master/screenshots/Screenshot%20from%202018-12-04%2011-36-25.png)
 - Pagina HTML funcionando correctamente, se muestra como usar el API y la forma de obtener los datos mendiante la URL del API REST.
-- El correct codigo Json que se debe mostrar cuando la peticion se realize mediante navegador.
+![alt text](https://github.com/ARSWCamiloLopez/Parcial3Corte/blob/master/screenshots/Screenshot%20from%202018-12-04%2011-37-22.png)
+- El correcto codigo Json que se debe mostrar cuando la peticion se realize mediante navegador.
+![alt text](https://github.com/ARSWCamiloLopez/Parcial3Corte/blob/master/screenshots/Screenshot%20from%202018-12-04%2011-38-03.png)
