@@ -13,13 +13,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author camilo
  */
 @SpringBootApplication
-public class APIDemoApplication {
+public class Parcial3CorteApiDemoApplication {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        SpringApplication.run(APIDemoApplication.class, args);
+        SpringApplication.run(Parcial3CorteApiDemoApplication.class, args);
     }
     
 }

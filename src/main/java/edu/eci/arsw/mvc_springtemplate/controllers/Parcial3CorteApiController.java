@@ -5,10 +5,10 @@
  */
 package edu.eci.arsw.mvc_springtemplate.controllers;
 
-import edu.eci.arsw.mvc_springtemplate.services.Services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import edu.eci.arsw.mvc_springtemplate.services.Parcial3CorteServices;
 
 /**
  *
@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping(value = "/template")
-public class APIController {
+public class Parcial3CorteApiController {
 
     @Autowired
-    Services services;
+    Parcial3CorteServices services;
     
 }

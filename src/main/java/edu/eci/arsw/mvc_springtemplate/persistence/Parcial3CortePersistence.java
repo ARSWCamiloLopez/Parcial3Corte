@@ -9,6 +9,6 @@ package edu.eci.arsw.mvc_springtemplate.persistence;
  *
  * @author camilo
  */
-public interface Persistence {
+public interface Parcial3CortePersistence {
     
 }

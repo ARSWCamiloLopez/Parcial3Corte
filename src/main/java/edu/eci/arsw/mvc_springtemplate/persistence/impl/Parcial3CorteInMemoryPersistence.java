@@ -3,20 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.eci.arsw.mvc_springtemplate.services;
+package edu.eci.arsw.mvc_springtemplate.persistence.impl;
 
-import edu.eci.arsw.mvc_springtemplate.persistence.Persistence;
+import edu.eci.arsw.mvc_springtemplate.model.ModelRespository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import edu.eci.arsw.mvc_springtemplate.persistence.Parcial3CortePersistence;
 
 /**
  *
  * @author camilo
  */
 @Service
-public class ServicesStub implements Services{
+public class Parcial3CorteInMemoryPersistence implements Parcial3CortePersistence{
     
     @Autowired
-    Persistence persistence;
+    ModelRespository mRepository;
     
 }

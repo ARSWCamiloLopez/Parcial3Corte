@@ -9,6 +9,6 @@ package edu.eci.arsw.mvc_springtemplate.services;
  *
  * @author camilo
  */
-public interface Services {
+public interface Parcial3CorteServices {
     
 }
