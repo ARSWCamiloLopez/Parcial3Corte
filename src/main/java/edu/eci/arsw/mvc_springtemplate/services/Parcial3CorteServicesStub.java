@@ -18,5 +18,15 @@ public class Parcial3CorteServicesStub implements Parcial3CorteServices{
     
     @Autowired
     Parcial3CortePersistence persistence;
+
+    @Override
+    public Double deCelciusAFahrenheit(Double celsius) {
+        return persistence.deCelciusAFahrenheit(celsius);
+    }
+
+    @Override
+    public Double deFahrenheitACelsius(Double fahrenheit) {
+        return persistence.deFahrenheitACelsius(fahrenheit);
+    }
     
 }
