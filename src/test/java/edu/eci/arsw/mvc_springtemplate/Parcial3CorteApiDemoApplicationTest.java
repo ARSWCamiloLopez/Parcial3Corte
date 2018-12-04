@@ -24,13 +24,12 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.embedded.LocalServerPort;
-import org.springframework.boot.test.TestRestTemplate;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
+import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.reactive.server.WebTestClient;
 import org.springframework.test.web.servlet.MockMvc;
@@ -40,11 +39,11 @@ import org.springframework.test.web.servlet.MockMvc;
  * @author estudiante
  */
 @RunWith(SpringRunner.class)
-@WebMvcTest
+@SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 public class Parcial3CorteApiDemoApplicationTest {
 
-    @Autowired
-    private MockMvc mockMvc;
+    @LocalServerPort
+    private int port;
 
     public Parcial3CorteApiDemoApplicationTest() {
     }
@@ -69,9 +68,48 @@ public class Parcial3CorteApiDemoApplicationTest {
      * Test of main method, of class Parcial3CorteApiDemoApplication.
      */
     @Test
-    public void greetingShouldReturnDefaultMessage() throws Exception {
-        this.mockMvc.perform(get("/")).andDo(print()).andExpect(status().isOk())
-                .andExpect(content().string(containsString("Hello World")));
+    public void test() throws Exception {
+        assertEquals(getHtppRequest("http://localhost:" + port + "/api/tocelsius/10"),
+                "{\"Celsius\":-12.222222222222221,\"Fahrenheit\":10.0}");
     }
-    
+
+    private final String USER_AGENT = "Mozilla/5.0";
+
+    /**
+     *
+     * @param GET_URL
+     * @return
+     * @throws IOException
+     */
+    public String getHtppRequest(String GET_URL) throws IOException {
+
+        URL obj = new URL(GET_URL);
+        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+        con.setRequestMethod("GET");
+        con.setRequestProperty("User-Agent", USER_AGENT);
+
+        //The following invocation perform the connection implicitly before getting the code
+        int responseCode = con.getResponseCode();
+        System.out.println("GET Response Code :: " + responseCode);
+
+        if (responseCode == HttpURLConnection.HTTP_OK) { // success
+            BufferedReader in = new BufferedReader(new InputStreamReader(
+                    con.getInputStream()));
+            String inputLine;
+            StringBuffer response = new StringBuffer();
+
+            while ((inputLine = in.readLine()) != null) {
+                response.append(inputLine);
+            }
+            in.close();
+
+            // print result
+            return response.toString();
+
+        } else {
+            System.out.println("GET request not worked");
+            return "No se han podido obtener las acciones";
+        }
+    }
+
 }
