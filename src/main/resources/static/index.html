@@ -11,6 +11,25 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>TODO write content</div>
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <form id="firstForm">
+                Convertir de grados Celsius a Fahrenheit
+                <input type="number" id="firstInput">
+                <input type="number" id="firstResult" disabled>
+                <button onclick="deCelsiusAFahrenheit()" type="button">Convertir</button>
+            </form>
+        </div>
+        <br>
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <form id="secondForm">
+                Convertir de grados Fahrenheit a Celsius
+                <input type="number" id="secondInput">
+                <input type="number" id="secondResult" disabled>
+                <button onclick="deFahrenheitACelisus()" type="button">Convertir</button>
+            </form>
+        </div>
+        
+        <script src="js/Controller.js"></script>
+            <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </body>
 </html>
