@@ -14,7 +14,7 @@ import edu.eci.arsw.mvc_springtemplate.persistence.Parcial3CortePersistence;
  * @author camilo
  */
 @Service
-public class Parcial3CorteInMemoryPersistence implements Parcial3CortePersistence{
+public class Parcial3CorteInMemoryPersistence implements Parcial3CortePersistence {
 
     @Override
     public Double deCelciusAFahrenheit(Double celsius) {
@@ -25,7 +25,5 @@ public class Parcial3CorteInMemoryPersistence implements Parcial3CortePersistenc
     public Double deFahrenheitACelsius(Double fahrenheit) {
         return (fahrenheit - 32) * 5 / 9;
     }
-    
-    
-    
+
 }
